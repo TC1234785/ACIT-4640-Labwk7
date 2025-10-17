@@ -54,5 +54,6 @@
 
 
 - A screenshot of the rendered html page from one of the servers
-![alt text]({BB9B7A34-9801-4A29-A9B9-EFD3BFA0BF48}.png)
+<img width="1048" height="379" alt="{BB8A8F91-F1B5-4285-B9CA-95B261533F1E}" src="https://github.com/user-attachments/assets/1c85a1d2-c941-496f-97c7-380bee01b229" />
+
 
