@@ -2,21 +2,57 @@
 - Required command(s) to: 
   - create new keys
     ```sh
+    # Creates a new key pair name aws and aws.pub in the the ~/.ssh folder
     ssh-keygen -t ed25519 -f ~/.ssh/aws"
     ```
-    - Creates a new key pair name aws and aws.pub in the the ~/.ssh folder
   - run included scripts to import and delete keys
-    - Note: If they are not executable, run ```sh chmod +x <file-name>```
+    - Note: If they are not executable, run 
+    ```sh 
+    # Makes <file-name> executable
+    chmod +x <file-name>
+    ```
     - To import the lab key
-        ```sh .\import_lab_key ~/.ssh/aws```
-    - To delete the 
+    ```sh 
+    # Run import file with public key as the argument
+    .\import_lab_key ~/.ssh/aws
+    ```
+    - To delete the lab key
+    ```sh 
+    #Run delete file (does not require an argument since it deletes based on the name of the key in the file)
     .\delete_lab_key
-  - terraform commands (init, fmt, validate, plan and apply)
-    - terraform init
-    - terraform apply
-  - ansible commands (syntax check, run playbook)
+    ```
+
+  - Terraform commands used (In the Terraform directory)
+    - Initialize Terraform
+    ```sh
+    # Start Terraform
+    terraform init
+    ```
+    - Validate Terraform configuration
+    ```sh
+    #Ensure terraform .tf file does not have any syntactical errors
+    terraform validate
+    ```
+    - Apply Terraform and run
+    ```sh
+    #Run terraform file
+    terraform apply
+    ```
+    - Destroy Terraform
+    ```sh
+    #Once the lab is completed, destroy all resources related to the terraform file
+    terraform destroy
+    ```
+    - Ansible commands used
+    ```sh
+    #Ensure Ansible syntax is correct after edits
+    ansible-playbook -i inventory/hosts.yml playbook.yml --syntax-check
+
+    #Running Ansible playbook
+    ansible-playbook -i inventory/hosts.yml playbook.yml
+    ```
 
 
-- Put commands in code blocks and include a brief description of each command.
-- A screenshot of the rendered html page from one of your servers, they should be almost the same, so just a screenshot of one is fine.
+- A screenshot of the rendered html page from one of the servers
+![alt text]({BB9B7A34-9801-4A29-A9B9-EFD3BFA0BF48}.png)
 
