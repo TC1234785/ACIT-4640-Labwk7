@@ -14,7 +14,7 @@
     - To import the lab key
     ```sh 
     # Run import file with public key as the argument
-    .\import_lab_key ~/.ssh/aws
+    .\import_lab_key ~/.ssh/aws.pub
     ```
     - To delete the lab key
     ```sh 
